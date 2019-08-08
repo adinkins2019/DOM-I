@@ -100,3 +100,11 @@ topPageLink.textContent = "Back to Top";
 
 let footerNode = document.querySelector('footer');
 footerNode.prepend(topPageLink);
+
+let headerNode = document.querySelector('header');
+headerNode.setAttribute("id", "top");
+
+let newElement = document.createElement('h2');
+newElement.textContent = "Main Content";
+let mainContent = document.querySelector('.bottom-content');
+mainContent.appendChild(newElement);
