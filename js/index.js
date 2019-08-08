@@ -88,4 +88,15 @@ address[2].textContent = siteContent.contact.email;
 let footerContent = document.querySelector('footer p');
 footerContent.textContent = siteContent.footer.copyright;
 
+let navColor = document.querySelector('header nav');
+navColor.style.color = "green";
 
+let navLinkColor = document.querySelectorAll('header nav a');
+navLinkColor.forEach((navLink) => {navLink.style.color = "green";});
+
+let topPageLink = document.createElement('a');
+topPageLink.href= "#top";
+topPageLink.textContent = "Back to Top";
+
+let footerNode = document.querySelector('footer');
+footerNode.prepend(topPageLink);
