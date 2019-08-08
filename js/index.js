@@ -44,5 +44,48 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navigation = document.getElementsByTagName('a');
 for(let i=0; i < navigation.length; i++){
   navigation[i].textContent = siteContent.nav["nav-item-" + (i +1)];
-  console.log(navigation[i].textContent);
+  //console.log(navigation[i].textContent);
 }
+
+let changeH1 = document.getElementsByTagName('h1');
+changeH1[0].textContent = siteContent.cta.h1;
+let ctaBtn = document.getElementsByTagName('button');
+//console.log(ctaBtn);
+ctaBtn[0].textContent = siteContent.cta.button;
+let ctaImg = document.getElementById('cta-img');
+ctaImg.src = siteContent.cta["img-src"];
+
+let topTitles = document.querySelectorAll('.main-content .top-content .text-content h4');
+topTitles[0].textContent = siteContent["main-content"]["features-h4"];
+topTitles[1].textContent = siteContent["main-content"]["about-h4"];
+let topContentTxt = document.querySelectorAll('.main-content .top-content .text-content p');
+topContentTxt[0].textContent = siteContent["main-content"]["features-content"];
+topContentTxt[1].textContent = siteContent["main-content"]["about-content"];
+
+
+let midImage = document.getElementById('middle-img');
+midImage.src = siteContent["main-content"]["middle-img-src"];
+
+let bottomTitles = document.querySelectorAll('.main-content .bottom-content .text-content h4');
+//console.log(bottomTitles);
+bottomTitles[0].textContent = siteContent["main-content"]["services-h4"];
+bottomTitles[1].textContent = siteContent["main-content"]["product-h4"];
+bottomTitles[2].textContent = siteContent["main-content"]["vision-h4"];
+let bottomContent = document.querySelectorAll('.main-content .bottom-content .text-content p');
+bottomContent[0].textContent = siteContent["main-content"]["services-content"];
+bottomContent[1].textContent = siteContent["main-content"]["product-content"];
+bottomContent[2].textContent = siteContent["main-content"]["vision-content"];
+
+let contactTitle= document.querySelector('.contact h4');
+console.log(contactTitle);
+contactTitle.textContent = siteContent.contact["contact-h4"];
+
+let address = document.querySelectorAll('.contact p');
+address[0].textContent = siteContent.contact.address;
+address[1].textContent = siteContent.contact.phone;
+address[2].textContent = siteContent.contact.email;
+
+let footerContent = document.querySelector('footer p');
+footerContent.textContent = siteContent.footer.copyright;
+
+
